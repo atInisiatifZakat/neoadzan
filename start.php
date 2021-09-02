@@ -32,14 +32,16 @@ define("_AUTHOR","cahyadsn");
 $_SESSION['c']=$c;
 $_SESSION['author']='cahyadsn';
 $_SESSION['ver']=sha1(rand());
+
 include 'inc/db.php';
-include 'inc/NeoAdzan.php';
+
 $neoadzan=new NeoAdzan();
 $neoadzan->setLatLng(-6.17501,106.820497);
 $neoadzan->setTimeZone(7);
 $sch=$neoadzan->getSchedule(date('Y'),date('n'));
 $version='1.0.2';
 $app_name='NeoAdzan!';
+
 /*header('Expires: '.date('r'));
 header('Cache-Control: no-store, no-cache, must-revalidate');
 header('Cache-Control: post-check=0, pre-check=0', FALSE);
@@ -229,5 +231,5 @@ header('Pragma: no-cache');*/
       </div>
     </body>
     <script src="js/jquery.min.js"></script>
-    <script src="inc/neoadzan_js.php?v=<?php echo $_SESSION['ver'];?>"></script>
+    <script src="js/neoadzan_js.php?v=<?php echo $_SESSION['ver'];?>"></script>
 </html>

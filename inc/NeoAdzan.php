@@ -25,11 +25,6 @@ See the MIT License for more details
 
 copyright (c) 2018-2021 by cahya dsn; cahyadsn@gmail.com
 ================================================================================*/
-include "TimeTraits.php";
-include "TrigonometriTraits.php";
-include "HijriTraits.php";
-include "Adzan.php";
-
 class NeoAdzan extends Adzan
 {
     use HijriTraits;

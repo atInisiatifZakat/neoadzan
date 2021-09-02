@@ -25,8 +25,9 @@ See the MIT License for more details
 
 copyright (c) 2018-2021 by cahya dsn; cahyadsn@gmail.com
 ================================================================================*/
-include "db.php";
-include "NeoAdzan.php";
+include __DIR__ . '/../../inc/autoload.php';
+include __DIR__ . '/../../inc/db.php';
+include __DIR__ . '/../../inc/NeoAdzan.php';
 
 $r=array('status'=>false,'error'=>'an error occured');
 if (!empty($_POST['id'])){

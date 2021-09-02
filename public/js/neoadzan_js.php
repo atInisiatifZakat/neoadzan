@@ -46,14 +46,14 @@ $(document).ready(function(){
    $('a.color').on('click',function() {
        var a = $(this).attr('data-value');
        document.getElementById('adzan_css').href = 'css/w3-theme-' + a + '.css';
-       $.post('inc/change.color.php', {
+       $.post('change.color.php', {
           'color': a
        })
     });
     //--
 	$('.slcProv').on('change',function(){
 		$('div#preload').show();
-		var url="inc/neoadzan_ajax.php?sid="+Math.random();
+		var url="js/neoadzan_ajax.php?sid="+Math.random();
 		$.post(
 			url,
 			{id:$(this).val(),y:$('#y').val(),m:$('#m').val()},
@@ -75,7 +75,7 @@ $(document).ready(function(){
 	});
 	$('.slcKab').on('change',function(){
 		$('div#preload').show();
-		var url="inc/neoadzan_ajax.php?sid="+Math.random();
+		var url="js/neoadzan_ajax.php?sid="+Math.random();
 		$.post(
 			url,
 			{id:$(this).val(),y:$('#y').val(),m:$('#m').val()},
@@ -83,7 +83,7 @@ $(document).ready(function(){
 				if(!d.status){
 					alert(d.status);
 				}else{
-					console.log(d);
+					//console.log(d);
 					$('#sch').html(d.data.sch);
 					$('.skab').html(d.data.nama+' , ');
 					$('.slat').html(d.data.lat);
@@ -97,7 +97,7 @@ $(document).ready(function(){
 	var m,y;
 	var changeMonth = function(){
 		$('div#preload').show();
-		var url="inc/neoadzan_ajax.php?sid="+Math.random();
+		var url="js/neoadzan_ajax.php?sid="+Math.random();
 		var idx=$('#kota').val();
 		if(idx=='') idx=$('#prop').val();
 		$.post(

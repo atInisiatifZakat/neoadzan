@@ -1,0 +1,23 @@
+{
+    "name": "inisiatif/neoadzan",
+    "description": "NeoAddzan applicatio fork cahyadsn/neoadzan",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Noor Adiana",
+            "email": "me@nooradiana.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "autoload": {
+        "classmap": [
+            "inc/Adzan.php",
+            "inc/HijriTraits.php",
+            "inc/NeoAdzan.php",
+            "inc/TimeTraits.php",
+            "inc/TrigonometriTraits.php"
+        ]
+    }
+}

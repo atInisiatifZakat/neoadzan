@@ -25,14 +25,18 @@ See the MIT License for more details
 
 copyright (c) 2018-2021 by cahya dsn; cahyadsn@gmail.com
 ================================================================================*/
-$dbhost='localhost';
-$dbuser='root';
-$dbpass='';
-$dbname='db_wilayah';
-$dbtable='wilayah_137_v1';
-$db_dsn = "mysql:dbname=$dbname;host=$dbhost";
+$dbhost = $_ENV['DB_HOSTNAME'];
+$dbuser = $_ENV['DB_USERNAME'];
+$dbpass = $_ENV['DB_PASSWORD'];
+$dbname = $_ENV['DB_NAME'];
+$dbtable = 'wilayah_137_v1';
+
+$dsn = "mysql:dbname=$dbname;host=$dbhost;port=3306;";
+
 try {
-  $db = new PDO($db_dsn, $dbuser, $dbpass);
+  $db = new PDO($dsn, $dbuser, $dbpass);
 } catch (PDOException $e) {
   echo 'Connection failed: '.$e->getMessage();
+
+  die();
 }

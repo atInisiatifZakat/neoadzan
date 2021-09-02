@@ -1,5 +1,6 @@
 <?php
-include "../inc/db.php";
+include __DIR__ . "/../inc/db.php";
+
 $r=array('status'=>false,'error'=>'an error occured');
 $query = $db->prepare("SELECT * FROM {$dbtable} WHERE CHAR_LENGTH(kode)=2 ORDER BY kode");
 $query->execute();
